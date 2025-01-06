@@ -6,7 +6,7 @@ import Link from "next/link";
 
 interface props {
     size?: "small" | "medium" | "large";
-    variant?: "accent" | "secondary" | "outline" | "disabled" | "ico";
+    variant?: "accent" | "secondary" | "outline" | "disabled" | "ico"| "success"| "danger";
     icon?: IconProps;
     iconTheme?: "accent" | "secondary" | "gray";
     iconPosition?: "left" | "right";
@@ -16,6 +16,8 @@ interface props {
     baseUrl?: string,
     linkType?: LinkType,
     action?: Function,
+    type? : "button" | "submit" | "reset" ;
+    fullwidth?: boolean,
 
 }
 
@@ -31,6 +33,8 @@ export const Button = ({
     baseUrl,
     linkType = "internal",
     action = () => { },
+    type = "button",
+    fullwidth,
 }: props) => {
     let variantStyles: string = "",
         sizeStyles: string = "",
@@ -51,6 +55,12 @@ export const Button = ({
         case "disabled":
             variantStyles = "bg-gray-400 border-gray-500 text-gray-600 rounded cursor-not-allowed";
             break;
+            case "success":
+                variantStyles = "bg-secondary hover:bg-secondary-300/50 text-white rounded";
+                break;
+                case "danger":
+                variantStyles = "bg-alerts-danger hover:bg-alerts-danger/50 text-white rounded";
+                break;
         case "ico":
             if (iconTheme === "accent") {
                 variantStyles = "bg-primary hover:bg-primary-400 text-white rounded-full";
@@ -58,6 +68,7 @@ export const Button = ({
             if (iconTheme === "secondary") {
                 variantStyles = "bg-primary hover:bg-primary-400 text-white rounded-full";
             }
+            
             if (iconTheme === "gray") {
                 variantStyles = "bg-gray hover:bg-gray-500 text-white rounded-full";
             }
@@ -92,7 +103,7 @@ export const Button = ({
         }
     };
     const buttonContent = (
-        <>
+         <>
             {isLoading && (
                 <div className="absolute inset-0 flex justify-center items-center">
                     {variant === "accent" || variant === "ico" ?
@@ -119,16 +130,20 @@ export const Button = ({
         </>
     )
     const buttonElement = (
-        <button type="button"
+        <button 
+        type={type}
             className={clsx(
                 variantStyles,
                 sizeStyles,
                 isLoading && "cursor-wait",
+                fullwidth && "w-full",
+                
                 "relative animate"
 
             )}
             onClick={handleClick}
-            disabled={disabled}
+
+            disabled={disabled || isLoading ? true : false}
         >
             {buttonContent}
         </button>

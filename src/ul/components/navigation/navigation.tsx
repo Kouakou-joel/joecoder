@@ -4,10 +4,14 @@ import { Logo } from "@/ul/disign-system/logo/logo";
 import { Button } from "@/ul/disign-system/button/button";
 import Link from "next/link";
 import { ActiveLink } from "./active-link";
+import { useAuth } from "@/context/AuthUserContext";
 
 interface props { }
 
 export const Navigation = ({ }: props) => {
+     const { authUser,authUserIsLoading } = useAuth();
+     console.log('authUser', authUser);
+     console.log('authUserIsLoading', authUserIsLoading);
     return (
         <div className="border-gray-400 border-b-2">
             <Container className="flex justify-between items-center gap-7 py-1.5">
@@ -27,13 +31,13 @@ export const Navigation = ({ }: props) => {
                 <div className="flex gap-4">
                     <Typography variant="caption3" component="div" className="flex items-center gap-7" >
                         <ActiveLink href="/disign-system"> Disign system</ActiveLink>
-                        <ActiveLink href="/projects"> Project</ActiveLink>
+                        <ActiveLink href="/projects"> Projet</ActiveLink>
                         <ActiveLink href="/formation"> Formation</ActiveLink>
                         <ActiveLink href="/conctat"> Contact</ActiveLink>
                     </Typography>
                     <div className="flex items-center gap-2">
-                        <Button size="small" >Connexion</Button>
-                        <Button size="small" variant="secondary">Rejoindre</Button>
+                        <Button baseUrl="/connexion" size="small" >Connexion</Button>
+                        <Button baseUrl="/connexion/inscription" size="small" variant="secondary">Rejoindre</Button>
                     </div>
                 </div>
             </Container>

@@ -57,7 +57,7 @@ export const FeaturedView = () => {
                         className="blur-2xl rounded-full object-scale-down"
                     />
                     <Image
-                        fill
+                      fill
                         src={feature.imagePath}
                         alt={feature.imageAlt}
                         className="rounded-full object-scale-down"
@@ -95,25 +95,25 @@ export const FeaturedView = () => {
                             theme="gray"
                             className="mb-8"
                         >
-                           Du partage des connexions et des formations, notre app gere ca pour toi.15
-                           Rejoins la communaute et grimpe en grand . Let's go | {""}
+                            Du partage des connexions et des formations, notre app gere ca pour toi.15
+                            Rejoins la communaute et grimpe en grand . Let's go | {""}
 
                         </Typography>
-                        <Button variant="secondary" baseUrl="/#" icon={{icon: RiArrowRightLine}} iconPosition="right">
-Commencer
+                        <Button variant="secondary" baseUrl="/#" icon={{ icon: RiArrowRightLine }} iconPosition="right">
+                            Commencer
                         </Button>
                     </div>
                     <div>
-                    <Typography
+                        <Typography
                             variant="caption3"
                             theme="gray"
                             component="div"
                             className="mb-5"
                         >
-                          Nos reseaux sociaux
+                            Nos reseaux sociaux
 
                         </Typography>
-                        <ReseauSocialButton  />
+                        <ReseauSocialButton />
                     </div>
                 </div>
             </Container>

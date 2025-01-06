@@ -1,6 +1,7 @@
 import { Seo } from "@/ul/components/seo/seo";
 import { Layout } from "@/ul/components/layout/layout";
-import { LandingPageViews } from "@/ul/modules/landing-page.views";
+import { LandingPageViews } from "@/ul/modules/landing-page/landing-page.views";
+
 
 
 
@@ -9,11 +10,11 @@ export default function Home() {
     <>
 
       <Seo title="joecoder" description="description..." />
-      
-      <Layout>
-       <LandingPageViews/> 
+
+      <Layout isDisplayBreadcrumbs={false}>
+        <LandingPageViews />
       </Layout>
-      
+
     </>
   );
 }

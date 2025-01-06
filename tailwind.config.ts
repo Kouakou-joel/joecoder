@@ -34,6 +34,11 @@ export default {
         700: "#1d1d1d",
 
       },
+      alerts: {
+        success: '#FEB72F',
+        warning: '#ffc107',
+        danger: '#dc3545',
+      }
 
     },
 

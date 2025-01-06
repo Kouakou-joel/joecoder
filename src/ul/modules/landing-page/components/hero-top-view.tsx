@@ -40,10 +40,12 @@ export const HeroTopView = () => {
             </div>
             <div>
                 <Image
-                    src="/assets/images/aniime hero.jpg"
+                    src="/assets/images/anime hero.jpg"
                     alt="anime inspiration"
-                    width={410}
-                    height={80}
+                    priority
+
+                    width={500}
+                    height={400}
                     className="top-0 right-0 z-0 absolute"
                 />
             </div>

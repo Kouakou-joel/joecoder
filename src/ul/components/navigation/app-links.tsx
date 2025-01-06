@@ -8,7 +8,7 @@ export const footerApplicatoLinks: AppLinks[] = [
         type: 'external',
     },
     {
-        label: 'Project',
+        label: 'Projet',
         baseUrl: '/#',
         type: 'external',
     },
@@ -19,7 +19,7 @@ export const footerApplicatoLinks: AppLinks[] = [
     },
     {
         label: 'Formation',
-        baseUrl: '/https://youtube.com/@JojoMignon-d5n',
+        baseUrl: 'https://youtube.com/@JojoMignon-d5n',
         type: 'internal',
     }
 ];
@@ -41,7 +41,7 @@ export const footerFormationLinks: AppLinks[] = [
     },
     {
         label: 'Contact',
-        baseUrl: '/https://youtube.com/@JojoMignon-d5n',
+        baseUrl: 'https://www.facebook.com/profile.php?id=100076540940260',
         type: 'external',
     }
 ];
@@ -52,42 +52,42 @@ export const footerUserLinks: AppLinks[] = [
         type: 'external',
     },
     {
-        label: 'connexion',
-        baseUrl: '/#',
+        label: 'Connexion',
+        baseUrl: '/connexion',
         type: 'external',
     },
     {
-        label: 'inscription',
-        baseUrl: '/#',
+        label: 'Inscription',
+        baseUrl: '/connexion/inscription',
         type: 'internal',
     },
     {
-        label: 'mot de passe ',
-        baseUrl: '/https://youtube.com/@JojoMignon-d5n',
+        label: 'Mot de passe ',
+        baseUrl: '/connexion/mot-de-passe-oublie',
         type: 'internal',
     }
 ];
 export const footerSocialLinks: AppLinks[] = [
     {
-        label: 'youtube',
-        baseUrl: '//https://youtube.com/@JojoMignon-d5n',
+        label: 'Youtube',
+        baseUrl: 'https://youtube.com/@JojoMignon-d5n',
         type: 'external',
         icon: RiYoutubeFill,
     },
     {
-        label: 'instagram',
-        baseUrl: '//https://youtube.com/@JojoMignon-d5n',
+        label: 'Instagram',
+        baseUrl: 'https://youtube.com/@JojoMignon-d5n',
         type: 'external',
         icon: RiInstagramFill,
     },
     {
-        label: 'linkedin',
-        baseUrl: '//https://youtube.com/@JojoMignon-d5n',
+        label: 'Facebook',
+        baseUrl: 'https://www.facebook.com/profile.php?id=100076540940260',
         type: 'external',
     },
     {
-        label: 'github',
-        baseUrl: '/https://youtube.com/@JojoMignon-d5n',
+        label: 'Github',
+        baseUrl: 'https://github.com/Kouakou-joel',
         type: 'external',
         icon: RiGithubFill,
     }
