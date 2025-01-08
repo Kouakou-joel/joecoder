@@ -15,4 +15,8 @@ export interface UserDocument {
     email: string;
     creation_Date: Timestamp;
     how_to_login: string;
+    onboardingIsCompleted: boolean;
+    displayName: string;
+    expertise: string;
+    biography: string;
 }

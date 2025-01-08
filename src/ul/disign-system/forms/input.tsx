@@ -7,11 +7,12 @@ interface Props{
     disabled?: boolean,
     isLoading?: boolean,
     register?: any,
-    errors?:Record<string, any>;
-    errorrMsg?: string
+    errors?:Record<string, any>,
+    errorrMsg?: string,
     id?: string,
     required?: boolean,
-    isAutocomplete?: boolean
+    isAutocomplete?: boolean,
+    label?: string,
 }
 export const Input =({
     type = "text",
@@ -23,17 +24,25 @@ export const Input =({
     errors ={},
     required ,
     errorrMsg="Tu dois enseigner ce champs",
+    label,
     isAutocomplete = false,
 }: Props) =>{
     return ( 
-    <div>
+    <div className="space-y-2">
+        {label && (
+            <Typography variant="caption3" component="div"
+            theme={errors[id] ? "danger" : "gray"}
+             className="block text-gray-700">
+                {label}
+            </Typography>
+        )}
         
         <input
         type={type}
         className={clsx(
             isLoading && "cursor-not-allowed",
             errors[id] 
-            ? "placeholder-alerts-danger text-alerts-danger" 
+            ? "placeholder-alerts-danger text-alerts-danger border-alerts-danger" 
             : "placeholder-gray-500",
             "border-gray-300 focus:border-primary px-3 p-2 border rounded w-full font-light focus:outline-none"
             
@@ -43,7 +52,7 @@ export const Input =({
         {...(register &&
         register(id, {
             required: {
-                value: required,
+                value: true,
                 message: errorrMsg,
             }
         }))}

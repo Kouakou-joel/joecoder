@@ -22,3 +22,9 @@ export interface FogetPasswordFormFielsType{
     email: string;
     
 }
+export interface onboardingProfileFormFielsType{
+    displayName: string,
+    expertise: string,
+    biography: string,
+   
+}
