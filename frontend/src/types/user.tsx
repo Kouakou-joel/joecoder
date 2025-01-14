@@ -19,4 +19,6 @@ export interface UserDocument {
     displayName: string;
     expertise: string;
     biography: string;
+    github: string ;
+    linkedin: string ;
 }

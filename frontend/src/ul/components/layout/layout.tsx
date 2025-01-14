@@ -6,6 +6,8 @@ import Footer from "../navigation/footer"
 import { Navigation } from "../navigation/navigation"
 import { UseAccountNavigation } from "../navigation/user-account-navigation";
 import { Session } from "../session/session";
+import { CallToActionSidebarComponent } from "@/ul/modules/landing-page/components/Call-to-action/call-to-action-sidebar";
+import { CallToFormBottom } from "@/ul/modules/landing-page/components/Call-to-action/call-to-form-bottom";
 
 interface Props {
     children: React.ReactNode;
@@ -24,8 +26,12 @@ export const Layout = ({ children,
     if (WithSidebar) {
         view = <Container className="mb-14">
             <div className="gap-7 grid grid-cols-12">
-                <div className="col-span-3">  <UseAccountNavigation /></div>
-                <div className="col-span-9"></div>
+                <div className="space-y-8 col-span-3"> 
+                     <UseAccountNavigation />
+                     <CallToActionSidebarComponent />
+                     <CallToFormBottom />
+                     </div>
+                <div className="col-span-9">{children}</div>
 
             </div>
         </Container>;

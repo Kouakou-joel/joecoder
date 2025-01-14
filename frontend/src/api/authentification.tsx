@@ -4,7 +4,7 @@ import {
     sendEmailVerification
 } from "firebase/auth";
 import { FirebaseError } from "firebase/app";
-import { auth } from "@/config/firebase-config"
+import { auth } from "@/config/firebase-config";
 
 export const firebaseCreateUser = async (email: string, password: string) => {
 
@@ -132,5 +132,35 @@ export const sendEmailToResetPasswod = async (email: string) => {
 
 
         };
+    }
+};
+
+export const updateUserIdentificationData = async (uid: string, data: any) => {
+    try {
+        const response = await fetch("https://console.firebase.google.com/project/joecoder-29421/functions", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                uid: uid,
+                data: data,
+            }),
+        });
+
+        if (!response.ok) {
+      const errorResponse = await response.json();
+      const firebaseError = errorResponse as FirebaseError;
+      return {
+        error: {
+            code: firebaseError.code,
+            message: firebaseError.message,
+        },
+      }
+        }
+
+        return { data: true };
+    } catch (error) {
+       
     }
 };

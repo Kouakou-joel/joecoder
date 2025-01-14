@@ -6,6 +6,7 @@ export interface FormType {
     reset?: any;
     isLoading: boolean;
     onSubmit: any;
+    
 }
 
 export interface RegisterFormFielsType{
@@ -27,4 +28,13 @@ export interface onboardingProfileFormFielsType{
     expertise: string,
     biography: string,
    
+}
+export interface UserProfileFormFielsType{
+    displayName: string,
+    expertise: string,
+    biography: string,
+    github: string,
+    linkedin: string,
+    twitter: string,
+    facebook: string,
 }

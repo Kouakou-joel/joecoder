@@ -11,6 +11,7 @@ import { firestoreUpdateDocument } from "@/api/firestore"
 import { useAuth } from "@/context/AuthUserContext"
 import { toast } from "react-toastify"
 import { useEffect } from "react"
+import { updateUserIdentificationData } from "@/api/authentification"
 
 
 export const profileStep = ({
@@ -22,9 +23,8 @@ export const profileStep = ({
     getCurrentStep,
 }: BaseComponentProps) => {
     const authUser = useAuth();
-    console.log("authUser", authUser)
-    const {value: isLoading, setValue: setIsLoading} = useToggle();
-   
+    const { value: isLoading, setValue: setIsLoading } = useToggle();
+
     const {
         handleSubmit,
         control,
@@ -34,44 +34,64 @@ export const profileStep = ({
         setValue,
 
     } = useForm<onboardingProfileFormFielsType>();
-    
-    const {displayName, expertise,  biography} = authUser.authUser.userDocument;
+
+    const { displayName, expertise, biography } = authUser.authUser.userDocument;
 
     useEffect(() => {
-        const fielstToUpdate : ("displayName"| "expertise" | "biography")[] =[
+        const fielstToUpdate: ("displayName" | "expertise" | "biography")[] = [
             "displayName",
             "expertise",
             "biography"
         ];
-        for(const field of fielstToUpdate){
+        for (const field of fielstToUpdate) {
             setValue(field, authUser.authUser.userDocument[field]);
         }
-        
+
     }, [])
 
-    const handleUpdateUserDocument = async ( FormData: onboardingProfileFormFielsType) => {
-        const {error} = await firestoreUpdateDocument (
+    const handleUpdateUserDocument = async (FormData: onboardingProfileFormFielsType) => {
+        const { error } = await firestoreUpdateDocument(
             "users",
             authUser.authUser.uid,
             FormData
         );
-        if(error){
-       setIsLoading(false);
-       toast.error(error.message);
-       return;
+        if (error) {
+            setIsLoading(false);
+            toast.error(error.message);
+            return;
         }
-      setIsLoading(false);
-      reset();
-      next();
-       
+        setIsLoading(false);
+        reset();
+        next();
+
     }
-    const onSubmit: SubmitHandler <onboardingProfileFormFielsType> = async (formData ) => {
+    const onSubmit: SubmitHandler<onboardingProfileFormFielsType> = async (
+        formData: onboardingProfileFormFielsType
+    ) => {
         setIsLoading(true);
-        if(
-            displayName !== formData.displayName || 
-            expertise!== formData.expertise ||
-            biography!== formData.biography
+        if (
+            displayName !== formData.displayName ||
+            expertise !== formData.expertise ||
+            biography !== formData.biography
         ) {
+            if (
+                displayName !== formData.displayName || authUser.authUser.displayName !== formData.displayName
+            ) {
+                const data ={
+                    displayName: formData.displayName
+                }
+                const result = await updateUserIdentificationData(
+                    authUser.authUser.uid,
+                    data
+                );
+
+                if (result?.error) {
+                    setIsLoading(false);
+                    toast.error(result.error.message);
+                    return;
+                }
+                toast.success("Nom d'utilisateur mis à jour");
+            }
             handleUpdateUserDocument(formData);
         }
         setIsLoading(false);
@@ -113,22 +133,22 @@ export const profileStep = ({
                     <div className="flex items-center col-span-6 h-full">
                         <div className="flex justify-end w-full">
                             <ProfileStepForm
-                            form={{
-                                control,
-                                errors,
-                                onSubmit,
-                                register,
-                                isLoading,
-                                reset,
-                                handleSubmit
-                            }}
-                             />
+                                form={{
+                                    control,
+                                    errors,
+                                    onSubmit,
+                                    register,
+                                    isLoading,
+                                    reset,
+                                    handleSubmit
+                                }}
+                            />
                         </div>
 
                     </div>
                 </Container>
             </div>
-           
+
             <OnboardingFooter
                 prev={prev}
                 next={handleSubmit(onSubmit)}
@@ -137,4 +157,4 @@ export const profileStep = ({
             />
         </div>
     )
-} 
+}   

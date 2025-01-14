@@ -4,17 +4,17 @@ import { createContext, useContext } from "react";
 
 const init = {
     uid: "",
-    email: "",
     displayName: "",
-    emailVerified: false,
+    email: "",
     photoURL: "",
+    emailVerified: false,
     phoneNumber: "",
     userDocument: {} as UserDocument,
 
 
 }
 const AUthUserContext = createContext({
-    authUser: init ,
+    authUser: init,
     authUserIsLoading: true,
 
 })
@@ -41,4 +41,4 @@ export function AuthUserPovider({ children }: props) {
     )
 }
 
-export const useAuth =() => useContext(AUthUserContext);
+export const useAuth = () => useContext(AUthUserContext);

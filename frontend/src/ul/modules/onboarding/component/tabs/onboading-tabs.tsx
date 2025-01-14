@@ -11,7 +11,8 @@ export const OnboardingTabs = ({ tabs, getCurrentStep }: props) => {
         <div className="inline-block relative">
             <div className="flex items-center space-x-5">
                 {tabs &&
-                    tabs.map((tab) => (
+                    tabs.map((tab) => 
+                        tab.id !==tabs.length && (
                         <div
                             key={tab.id}
                             className={clsx(
