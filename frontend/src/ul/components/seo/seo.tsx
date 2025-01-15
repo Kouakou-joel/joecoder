@@ -5,7 +5,7 @@ title: string;
 description: string;
 }
 
-export const Seo = ({title, description}:props) => {
+export const Seo = ({title, description}: props) => {
     return (
         <Head>
             <title>JOE CODERS</title>

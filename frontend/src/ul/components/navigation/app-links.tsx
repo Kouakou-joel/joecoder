@@ -1,5 +1,5 @@
 import { AppLinks } from "@/types/app-links";
-import { RiFacebookBoxFill, RiGithubFill, RiInstagramFill, RiYoutubeFill } from "react-icons/ri";
+import { RiGithubFill, RiInstagramFill, RiYoutubeFill } from "react-icons/ri";
 
 export const footerApplicatoLinks: AppLinks[] = [
     {

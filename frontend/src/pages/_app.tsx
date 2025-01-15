@@ -1,7 +1,7 @@
 import { AuthUserPovider } from "@/context/AuthUserContext";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import { Flip, ToastContainer, toast } from 'react-toastify';
+import { Flip, ToastContainer } from 'react-toastify';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

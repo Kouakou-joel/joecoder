@@ -12,7 +12,7 @@ export const ActiveLink = ({ href, children }: props) => {
 
     const isActive: boolean = useMemo(() =>{
         return router.asPath === href;
-    }, [router.pathname, href,])
+    },[router.pathname, href,]);
 
     return (
 

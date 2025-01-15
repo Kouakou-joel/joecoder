@@ -1,5 +1,4 @@
 import { BaseComponentProps } from "@/types/onboarding-steps-list"
-import { Component } from "react";
 
 export const OnboardingView = ({
     stepsList,

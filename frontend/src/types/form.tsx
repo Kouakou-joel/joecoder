@@ -3,7 +3,7 @@ export interface FormType {
     errors: any;
     handleSubmit: any;
     register: any;
-    reset?: any;
+    reset?: string | boolean;
     isLoading: boolean;
     onSubmit: any;
     

@@ -18,7 +18,7 @@ export const UserAccountContainer = () => {
         setValue,
         register,
         setError,
-        reset,
+    
     } = useForm<UserProfileFormFielsType>();
     
     const { displayName, expertise, biography, github, linkedin } = authUser.userDocument;
@@ -33,7 +33,7 @@ export const UserAccountContainer = () => {
         for (const field of fielstToUpdate) {
             setValue(field, authUser.userDocument[field]);
         }
-    }, []);
+    },[]);
 
     const handleUpdateUserDocument = async (formData: UserProfileFormFielsType) => {
         setIsLoading(true);

@@ -82,7 +82,7 @@ export const profileStep = ({
                 }
                 const result = await updateUserIdentificationData(
                     authUser.authUser.uid,
-                    data
+                    data,
                 );
 
                 if (result?.error) {
@@ -139,7 +139,7 @@ export const profileStep = ({
                                     onSubmit,
                                     register,
                                     isLoading,
-                                    reset,
+                    
                                     handleSubmit
                                 }}
                             />

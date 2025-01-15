@@ -11,7 +11,7 @@ export const RegisterForm = ({ form }: Props) => {
         register,
         isLoading,
         onSubmit,
-        handleSubmit,
+        handleSubmit
      } = form;
     return (
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 pt-8 pb-5">

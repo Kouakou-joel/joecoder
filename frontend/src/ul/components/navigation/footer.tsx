@@ -4,7 +4,7 @@ import Image from "next/image";
 import { footerLinks } from "./app-links";
 import { v4 as uuidv4 } from "uuid";
 import { ActiveLink } from "./active-link";
-import { AppLinks, FooterLinks,  } from "@/types/app-links";
+import { FooterLinks,  } from "@/types/app-links";
 import { LinkTypes } from "@/lib/link-types";
 import { ReseauSocialButton } from "./reseau-social-button";
 

@@ -6,6 +6,7 @@ import {
 import { FirebaseError } from "firebase/app";
 import { auth } from "@/config/firebase-config";
 
+
 export const firebaseCreateUser = async (email: string, password: string) => {
 
     try {
@@ -103,12 +104,12 @@ export const sendEmailVerificationProccedure = async () => {
         }
     }
     else {
-          return { 
+        return {
             error: {
                 code: "unknown",
-                 message: "Aucun utilisateur connecté" 
-                }
-         }
+                message: "Aucun utilisateur connecté"
+            }
+        }
     }
 };
 
@@ -149,18 +150,28 @@ export const updateUserIdentificationData = async (uid: string, data: any) => {
         });
 
         if (!response.ok) {
-      const errorResponse = await response.json();
-      const firebaseError = errorResponse as FirebaseError;
-      return {
-        error: {
-            code: firebaseError.code,
-            message: firebaseError.message,
-        },
-      }
+            const errorResponse = await response.json();
+            const firebaseError = errorResponse as FirebaseError;
+            return {
+                error: {
+                    code: firebaseError.code,
+                    message: firebaseError.message,
+                },
+            }
         }
 
         return { data: true };
     } catch (error) {
-       
+        const firebaseError = error as FirebaseError;
+        return {
+            error: {
+
+                code: firebaseError.code,
+                message: firebaseError.message,
+            },
+
+
+        };
+
     }
 };
