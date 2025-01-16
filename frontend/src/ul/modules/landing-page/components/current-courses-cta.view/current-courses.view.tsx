@@ -26,7 +26,7 @@ export const CurrentCoursesView = () => {
                         className="uppercase"
                         weight="medium"
                     >
-                        lire l'information
+                        lire l information
                     </Typography>
                 </div>
                         <Image

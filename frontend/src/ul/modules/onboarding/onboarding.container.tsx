@@ -2,7 +2,7 @@ import { useState } from "react";
 import { OnboardingView } from "./onboarding.view";
 import { onboardingStepsListInter } from "@/types/onboarding-steps-list";
 import { welcomeStep } from "./component/steps/welcome-step/welccome-step";
-import { profileStep } from "./component/steps/profile-step/profile-step";
+import { ProfileStep } from "./component/steps/profile-step/profile-step";
 import { AvatarStep } from "./component/steps/avata-step";
 import { FinalStep } from "./component/steps/finale-step/final-step";
 
@@ -19,7 +19,7 @@ export const OnboardingContainer = () => {
         {
             id: 2,
             label: "Profile",
-            component: { step: profileStep }
+            component: { step: ProfileStep }
         },
         {
             id: 3,

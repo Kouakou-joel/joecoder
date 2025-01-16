@@ -1,5 +1,5 @@
-import { BaseComponentProps } from "@/types/onboarding-steps-list"
 
+import { BaseComponentProps } from "@/types/onboarding-steps-list"
 import { OnboardingFooter } from "../../footer/onboarding-footer"
 import { Container } from "@/ul/components/container/container"
 import { Typography } from "@/ul/disign-system/typography/typography"
@@ -29,21 +29,20 @@ export const welcomeStep = (
                                 variant="h1"
                                 component="h1"
                             >
-                                Bienvenue sur l'app des singes coders !
+                                Bienvenue sur l app des singes coders !
                                 Devs Studio 😎
                             </Typography>
                             <Typography
                                 variant="body-base"
                                 component="p"
                                 theme="gray"
-
                             >
                                 Viens traiter avec les developpeurs aussi  fous que toi,
                                 montre tes pojets persos et recois feedback conssecutifs (ou fais-toi carrement descendre).
                                 Prete a cree des trucs incrroyables.
                                 Attends tes feedbacks et valides tes projets!
-                                C'est aussi un endroit pour faire des decouvertes et apprendre de nouvelles choses.
-                                N'oublie pas de te connecter avec des devs web et de booster ta carriere.
+                                C est aussi un endroit pour faire des decouvertes et apprendre de nouvelles choses.
+                                N oublie pas de te connecter avec des devs web et de booster ta carriere.
                             </Typography>
                         </div>
                     </div>

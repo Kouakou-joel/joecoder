@@ -1,5 +1,4 @@
 import { Container } from "@/ul/components/container/container"
-
 import { Box } from "@/ul/disign-system/box/box"
 import { Typography } from "@/ul/disign-system/typography/typography"
 import Link from "next/link"
@@ -31,9 +30,9 @@ export const LoginView = ({ form }: Props) => {
                         </Typography>
                         <div className="flex items-center gap-2">
                             <Typography variant="caption3" component="span" theme="gray" >
-                                Tu n'as pas de compte ?
+                                Tu n as pas de compte ?
                             </Typography>
-                            <Typography variant="caption4" component="span" theme="primary" >
+                            <Typography variant="caption4" component="span" theme="primary">
                                 <Link href="/connexion/inscription"> Inscription</Link>
                             </Typography>
                         </div>

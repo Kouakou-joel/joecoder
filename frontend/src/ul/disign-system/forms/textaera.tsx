@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import clsx from "clsx";
 import { Typography } from "../typography/typography"
 
@@ -23,7 +24,6 @@ export const Texteara = ({
     id = "",
     register,
     errors = {},
-    required,
     errorrMsg = "Tu dois enseigner ce champs",
     label,
     isAutocomplete = false,

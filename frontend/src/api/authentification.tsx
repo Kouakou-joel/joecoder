@@ -135,7 +135,7 @@ export const sendEmailToResetPasswod = async (email: string) => {
         };
     }
 };
-
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export const updateUserIdentificationData = async (uid: string, data: any) => {
     try {
         const response = await fetch("https://console.firebase.google.com/project/joecoder-29421/functions", {

@@ -25,7 +25,7 @@ export const Layout = ({ children,
 
     if (WithSidebar) {
         view = <Container className="mb-14">
-            <div className="gap-7 grid grid-cols-12">
+            <div className="gap-6 grid grid-cols-12">
                 <div className="space-y-8 col-span-3"> 
                      <UseAccountNavigation />
                      <CallToActionSidebarComponent />

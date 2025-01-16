@@ -1,4 +1,4 @@
-import userFirebaseAuth from "@/hoock/user-firebase-auth";
+import UserFirebaseAuth from "@/hoock/user-firebase-auth";
 import { UserDocument } from "@/types/user";
 import { createContext, useContext } from "react";
 
@@ -22,7 +22,7 @@ interface props {
     children: React.ReactNode;
 }
 export function AuthUserPovider({ children }: props) {
-    const auth = userFirebaseAuth();
+    const auth = UserFirebaseAuth();
     return (
         <AUthUserContext.Provider value={{
             authUser: auth.authUser as {

@@ -1,3 +1,4 @@
+
 import { IconProps } from "@/types/iconProps";
 import clsx from "clsx";
 import { Spinner } from "../spinner/spinner";
@@ -15,7 +16,7 @@ interface props {
     children?: React.ReactNode;
     baseUrl?: string,
     linkType?: LinkType,
-    action?: Function,
+    action?: () => void,
     type? : "button" | "submit" | "reset" ;
     fullwidth?: boolean,
 

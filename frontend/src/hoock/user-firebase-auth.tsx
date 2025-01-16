@@ -1,12 +1,13 @@
-import { auth, db } from "@/config/firebase-config"
+import { auth, db } from "@/config/firebase-config";
 import { UserDocument, userInterface } from "@/types/user";
 import { onAuthStateChanged, User } from "firebase/auth";
 import { doc, onSnapshot } from "firebase/firestore";
-import { useEffect, useState } from "react"
+import { useEffect, useState, useCallback } from "react";
 
-export default function userFirebaseAuth() {
+export default function UserFirebaseAuth() {
     const [authUser, setAuthUser] = useState<userInterface | null>(null);
     const [authUserIsLoading, setAuthUserIsLoading] = useState<boolean>(true);
+
     const formatAuthUser = (user: User | userInterface) => ({
         uid: user.uid,
         email: user.email || "",
@@ -15,7 +16,8 @@ export default function userFirebaseAuth() {
         phoneNumber: user.phoneNumber || "",
         emailVerified: user.emailVerified || false,
     });
-    const getUserDocument = async (user: userInterface) => {
+
+    const getUserDocument = useCallback(async (user: userInterface) => {
         if (auth.currentUser) {
             const documentRef = doc(db, "users", auth.currentUser.uid);
             const compactUser = user;
@@ -26,13 +28,13 @@ export default function userFirebaseAuth() {
                 setAuthUser((prevAuthUser) => ({
                     ...prevAuthUser,
                     ...compactUser,
-
                 }));
                 setAuthUserIsLoading(false);
-            })
+            });
         }
-    }
-    const authStateChanged = async (authState: userInterface | User | null) => {
+    }, []);
+
+    const authStateChanged = useCallback(async (authState: userInterface | User | null) => {
         if (!authState) {
             setAuthUser(null);
             setAuthUserIsLoading(false);
@@ -41,17 +43,15 @@ export default function userFirebaseAuth() {
         setAuthUserIsLoading(true);
         const formattedUser = formatAuthUser(authState);
         await getUserDocument(formattedUser);
-
-    };
+    }, [getUserDocument]);
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, authStateChanged);
         return () => unsubscribe();
+    }, [authStateChanged]);
 
-    }, [])
     return {
         authUser,
-        authUserIsLoading
-    }
-
+        authUserIsLoading,
+    };
 }

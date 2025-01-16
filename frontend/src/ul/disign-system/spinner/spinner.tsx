@@ -6,7 +6,7 @@ interface Props {
     variant?: "primary" | "white";
     className?: string;
 }
-export const Spinner = ({ size = "medium", variant = "primary",className}: Props) => {
+export const Spinner = ({ size = "medium", variant = "primary"}: Props) => {
     let variantStyle: string, sizeStyle: string;
 
 

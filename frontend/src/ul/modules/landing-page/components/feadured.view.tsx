@@ -96,7 +96,7 @@ export const FeaturedView = () => {
                             className="mb-8"
                         >
                             Du partage des connexions et des formations, notre app gere ca pour toi.15
-                            Rejoins la communaute et grimpe en grand . Let's go | {""}
+                            Rejoins la communaute et grimpe en grand . Lets go | {""}
 
                         </Typography>
                         <Button variant="secondary" baseUrl="/#" icon={{ icon: RiArrowRightLine }} iconPosition="right">

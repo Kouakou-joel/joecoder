@@ -2,7 +2,6 @@ import { Typography } from "@/ul/disign-system/typography/typography";
 import clsx from "clsx";
 import Link from "next/link";
 import { useRouter } from "next/router"
-import { join } from "path";
 import { RiHome3Line } from "react-icons/ri";
 
 export const Breadcrumbs = () => {

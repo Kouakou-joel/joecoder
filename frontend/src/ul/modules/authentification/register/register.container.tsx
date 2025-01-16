@@ -1,4 +1,4 @@
-import { set, SubmitHandler, useForm } from "react-hook-form"
+import { SubmitHandler, useForm } from "react-hook-form"
 import { RegisterView } from "./register.view"
 import { RegisterFormFielsType } from "@/types/form";
 

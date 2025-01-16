@@ -1,3 +1,4 @@
+
 import { BaseComponentProps } from "@/types/onboarding-steps-list";
 import { useToggle } from "@/hoock/use-toggle";
 import { firestoreUpdateDocument } from "@/api/firestore";
@@ -47,13 +48,12 @@ export const AvatarStep = ({
       const { error } = await firestoreUpdateDocument("users", authUser.authUser.uid, body);
 
       if (error) {
-        throw new Error(error.message);
+       toast.error(error.message);
       }
-
       toast.success("Avatar mis à jour avec succès");
       next();
-    } catch (error: any) {
-      toast.error(error.message || "Une erreur inconnue est survenue");
+    }catch {
+      toast.error("Une erreur inconnue est survenue");
     } finally {
       toggle();
     }
@@ -70,9 +70,7 @@ export const AvatarStep = ({
         (snapshot) => {
           const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
           setUploadProgress(progress);
-     
             toast.success("Avatar téléchargé avec succès");
-
         },
         (error) => {
           console.error("Erreur de téléchargement", error);
@@ -83,7 +81,7 @@ export const AvatarStep = ({
           try {
             const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
             await updateUserDocument(downloadURL);
-          } catch (error: any) {
+          } catch (error) {
             toast.error("Erreur lors de la récupération de l'URL de l'image");
             console.error("Erreur", error);
           } finally {
@@ -108,7 +106,7 @@ export const AvatarStep = ({
                 Dernière étape! 😏
               </Typography>
               <Typography variant="body-base" component="p" theme="gray">
-                C'est sûr, tu as une tête à être sur dev studios et des startups.
+                C est sûr, tu as une tête à être sur dev studios et des startups.
                 Mais tu as besoin de ta plus belle photo de profil pour que tout le monde voie
                 à quel point tu es incroyable et capable de créer des choses qui te ressemblent.
                 Utilise une photo de ton choix et clique sur le bouton de téléchargement.

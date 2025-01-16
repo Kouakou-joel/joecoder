@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
 
-      <Seo title="joecoder" description="description..." />
+      <Seo  title="joecoder" description="description..." />
 
       <Layout isDisplayBreadcrumbs={false}>
         <LandingPageViews />

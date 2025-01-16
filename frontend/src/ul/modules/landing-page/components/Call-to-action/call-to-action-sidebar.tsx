@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export const CallToActionSidebarComponent = ()=>{
     return(
-        <div className="relative flex flex-col justify-center items-center gap-5 bg-primary px-8 py-12 pb-44 rounded h-24 overflow-hidden">
+        <div className="relative flex flex-col justify-center items-center gap-8 bg-primary px-8 py-12 pb-44 rounded h-80 overflow-hidden">
             <Typography
             variant="lead"
             weight="medium"
@@ -17,18 +17,18 @@ export const CallToActionSidebarComponent = ()=>{
             <div>
                 <Button
                 baseUrl="http://google.com"
-                variant="success"
+                variant="secondary"
                 linkType="external"
 
                  >
                     Découvrir
                 </Button>
                 <Image
-                src="/assets/images/rocket.jpg"
+                src="/assets/images/top.svg"
                  alt="illustration" 
-                 width={120}
-                 height={120} 
-                 className="-bottom-7 left-1/2 absolute transform translate-x-1/2"
+                 width={200}
+                 height={200} 
+                 className="-bottom-2 left-1/2 absolute transform -translate-x-1/2"
                 />
             </div>
         </div>

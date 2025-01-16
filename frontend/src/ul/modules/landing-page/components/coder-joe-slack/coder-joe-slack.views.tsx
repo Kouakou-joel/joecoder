@@ -4,7 +4,6 @@ import Image from "next/image"
 import { Button } from "@/ul/disign-system/button/button"
 import { LinkTypes } from "@/lib/link-types"
 import { Logo } from "@/ul/disign-system/logo/logo"
-import { RiPlayCircleLine } from "react-icons/ri"
 
 export const CoderJoeSlackViews = () => {
 
@@ -37,17 +36,15 @@ export const CoderJoeSlackViews = () => {
                 <Button baseUrl="/#"
                     linkType={LinkTypes.EXTERNAL}
                 >
-                    Rejoins le groupe d'aide
+                    Rejoins le groupe d aide
                 </Button>
             </div>
             <div className="relative w-[300px] h-300px]">
                 <Image fill
                     src="/assets/images/slack.avif"
-                    alt=""
-                    className="rounded"
-                />
+                    alt="description slack"
+                    className="rounded"/>
             </div>
-
         </Container >
     )
 }

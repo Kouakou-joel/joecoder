@@ -14,7 +14,7 @@ import { useEffect } from "react"
 import { updateUserIdentificationData } from "@/api/authentification"
 
 
-export const profileStep = ({
+export const ProfileStep = ({
     prev,
     next,
     isFirstStep,
@@ -47,7 +47,7 @@ export const profileStep = ({
             setValue(field, authUser.authUser.userDocument[field]);
         }
 
-    }, [])
+    }, [authUser.authUser.userDocument, setValue])
 
     const handleUpdateUserDocument = async (FormData: onboardingProfileFormFielsType) => {
         const { error } = await firestoreUpdateDocument(
@@ -139,7 +139,6 @@ export const profileStep = ({
                                     onSubmit,
                                     register,
                                     isLoading,
-                    
                                     handleSubmit
                                 }}
                             />

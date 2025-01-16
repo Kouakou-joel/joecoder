@@ -12,7 +12,7 @@ export const UserAccountForm = ({ form }: props) => {
     const { register, errors, isLoading, onSubmit, handleSubmit } = form;
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 w-full">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
             <div className="flex justify-between items-center py-5">
                 <div>{/*avatar*/}</div>
 
@@ -60,10 +60,10 @@ export const UserAccountForm = ({ form }: props) => {
                 <div className="space-y-4 col-span-6">
                     <Input
                         type="url"
-                        label="linkedin"
-                        placeholder="linkedin.com/Devs-studios"
+                        label="Linkedin"
+                        placeholder="linkedin.com/Devs-stu..."
                         isLoading={isLoading}
-                        id="expertise"
+                        id="linkedin"
                         register={register}
                         errors={errors}
                         errorrMsg="Tu doit indiquer ton pofile linkedin"
@@ -72,7 +72,7 @@ export const UserAccountForm = ({ form }: props) => {
                     <Input
                         type="url"
                         label="Github"
-                        placeholder="githube.com/DevStudios"
+                        placeholder="githube.com/DevStudi..."
                         isLoading={isLoading}
                         id="github"
                         register={register}
@@ -84,7 +84,7 @@ export const UserAccountForm = ({ form }: props) => {
             </div>
             <div>
                 <Texteara
-                    rows={16}
+                    rows={10}
                     label="Biographie"
                     placeholder="Developpeur front-end react ��"
                     register={register}

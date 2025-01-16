@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import clsx from "clsx";
 import { Typography } from "../typography/typography";
 
@@ -17,12 +18,10 @@ interface Props{
 export const Input =({
     type = "text",
     placeholder,
-    disabled = false,
     isLoading,
     id = "",
     register,
     errors ={},
-    required ,
     errorrMsg="Tu dois enseigner ce champs",
     label,
     isAutocomplete = false,
@@ -39,7 +38,7 @@ export const Input =({
         
      <div className="flex items-center">
      {type === "url" &&(
-            <div className="border-gray-400 border-y bg-gray-500/40 py-4 border-l rounded-l text-gray-500">
+            <div className="border-gray-400 border-y bg-gray-500/40 p-2 border-l rounded-l text-gray-500">
                 httttp://
             </div>
         )}
@@ -52,11 +51,12 @@ export const Input =({
             errors[id] 
             ? "placeholder-alerts-danger text-alerts-danger border-alerts-danger" 
             : "placeholder-gray-500",
-            "border-gray-300 focus:border-primary px-3 p-2 border rounded w-full font-light focus:outline-none"
+            "border-gray-300 focus:border-primary px-3 p-2 border  w-full font-light focus:outline-none"
             
         )}
         placeholder={placeholder}
         disabled={isLoading}
+        zz
         {...(register &&
         register(id, {
             required: {

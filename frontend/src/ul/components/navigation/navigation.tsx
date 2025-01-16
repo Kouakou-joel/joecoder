@@ -7,9 +7,7 @@ import { ActiveLink } from "./active-link";
 import { useAuth } from "@/context/AuthUserContext";
 import { AccountAvatarLinks } from "./account-avatar-links";
 
-interface props { }
-
-export const Navigation = ({ }: props) => {
+export const Navigation = () => {
     const { authUser } = useAuth();
     console.log('authUser', authUser);
     const authenticationSystem = (
@@ -18,7 +16,6 @@ export const Navigation = ({ }: props) => {
             <Button baseUrl="/connexion/inscription" size="small" variant="secondary">Rejoindre</Button>
         </div>
     )
-
 
     return (
         <div className="border-gray-400 border-b-2">
@@ -38,7 +35,6 @@ export const Navigation = ({ }: props) => {
                 </Link>
                 <div className="flex gap-4">
                     <Typography variant="caption3" component="div" className="flex items-center gap-7" >
-                        <ActiveLink href="/disign-system"> Disign system</ActiveLink>
                         <ActiveLink href="/projects"> Projet</ActiveLink>
                         <ActiveLink href="/formation"> Formation</ActiveLink>
                         <ActiveLink href="/conctat"> Contact</ActiveLink>

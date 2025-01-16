@@ -1,5 +1,4 @@
 import clsx from "clsx";
-import React, { Component } from "react";
 
 interface props {
     variant?:

@@ -42,8 +42,8 @@ export const RegisterForm = ({ form }: Props) => {
                 errorrMsg="Tu dois renseigner ce champs"
             />
             <Button type="submit" disabled={isLoading} fullwidth>
-                S'inscrire
+                S inscrire
             </Button>
         </form>
-    )
+    );
 };

@@ -43,10 +43,9 @@ export const RegisterView = ({form}: Props) => {
                         <Typography variant="caption4" component="span" theme="gray" className="space-y-1 mx-auto max-w-md text-center" >
                             <div>En t inscrivant tu acceptes les  </div>
                             <div>
-                            <Link href="/#" className="text-gray"> conditions d'utilisation</Link>
+                            <Link href="/#" className="text-gray"> conditions d utilisation</Link>
                             {" "}  et {" "}
                             <Link href="/#" className="text-gray">politique de confidentialité</Link>
-                            .
                             </div>
                         
                         </Typography>

@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export const CallToFormBottom = ()=>{
     return(
-        <div className="relative flex flex-col justify-center items-center gap-5 bg-secondary-400 px-8 py-12 pb-44 rounded h-24 overflow-hidden">
+        <div className="relative flex flex-col justify-center items-center gap-8 bg-secondary-400 px-8 py-12 pb-44 rounded h-80 overflow-hidden">
             <Typography
             variant="lead"
             weight="medium"
@@ -25,11 +25,11 @@ export const CallToFormBottom = ()=>{
                     profite 😎
                 </Button>
                 <Image
-                src="/assets/images/slack.avif"
+                src="/assets/images/cake.svg"
                  alt="illustration" 
-                 width={120}
-                 height={120} 
-                 className="-bottom-7 left-1/2 absolute transform translate-x-1/2"
+                 width={240}
+                 height={240} 
+                 className="-bottom-4 left-1/2 absolute transform -translate-x-1/2"
                 />
             </div>
         </div>

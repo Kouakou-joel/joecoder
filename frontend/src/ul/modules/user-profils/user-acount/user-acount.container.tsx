@@ -33,7 +33,7 @@ export const UserAccountContainer = () => {
         for (const field of fielstToUpdate) {
             setValue(field, authUser.userDocument[field]);
         }
-    },[]);
+    },[authUser.userDocument, setValue]);
 
     const handleUpdateUserDocument = async (formData: UserProfileFormFielsType) => {
         setIsLoading(true);
@@ -90,7 +90,7 @@ export const UserAccountContainer = () => {
     }
 
     return (
-        <div className="flex justify-center pt-20 pb-40">
+        <div className="flex justify-center py-20">
             <UserAccountView
                 form={{
                     errors,

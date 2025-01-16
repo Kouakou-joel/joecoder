@@ -24,11 +24,11 @@ export const RightLandingListeView = () => {
                     <div className="space-y-3">
                         <ListPoint>Progresse rapidement</ListPoint>
                         <ListPoint>Inscripte-toi</ListPoint>
-                        <ListPoint>Gagne de l'assurance</ListPoint>
+                        <ListPoint>Gagne de l assurance</ListPoint>
                     </div>
                     <div className="relative">
                         <Button baseUrl="/#" icon={{ icon: RiArrowRightLine }} iconPosition="right">
-                            Let's go
+                            Lets go
                         </Button>
                     </div>
                 </div>
