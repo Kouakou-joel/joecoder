@@ -10,7 +10,7 @@ export default function MonCompte() {
   return (
     <>
 
-      <Seo title="Mon espace" description="description..." />
+      <Seo title="Mon espace" description="Page de l utilisateur auth..." />
 
       <Layout WithSidebar sessionStatus={REGISTERED}>
     

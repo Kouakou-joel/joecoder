@@ -13,7 +13,6 @@ import { toast } from "react-toastify"
 import { useEffect } from "react"
 import { updateUserIdentificationData } from "@/api/authentification"
 
-
 export const ProfileStep = ({
     prev,
     next,
@@ -23,12 +22,13 @@ export const ProfileStep = ({
     getCurrentStep,
 }: BaseComponentProps) => {
     const authUser = useAuth();
+    console.log("authUser", authUser);
     const { value: isLoading, setValue: setIsLoading } = useToggle();
 
     const {
         handleSubmit,
         control,
-        formState: { errors },
+        formState:{ errors },
         register,
         reset,
         setValue,
@@ -53,8 +53,8 @@ export const ProfileStep = ({
         const { error } = await firestoreUpdateDocument(
             "users",
             authUser.authUser.uid,
-            FormData
-        );
+            FormData,
+        )
         if (error) {
             setIsLoading(false);
             toast.error(error.message);
@@ -63,12 +63,13 @@ export const ProfileStep = ({
         setIsLoading(false);
         reset();
         next();
-
+        toast.success("Profil mis à jour avec succès");
     }
     const onSubmit: SubmitHandler<onboardingProfileFormFielsType> = async (
         formData: onboardingProfileFormFielsType
     ) => {
         setIsLoading(true);
+        console.log("formData", formData);
         if (
             displayName !== formData.displayName ||
             expertise !== formData.expertise ||
@@ -153,6 +154,7 @@ export const ProfileStep = ({
                 next={handleSubmit(onSubmit)}
                 isFirstStep={isFirstStep()}
                 isLastStep={isLastStep()}
+                isLoading={isLoading}
             />
         </div>
     )

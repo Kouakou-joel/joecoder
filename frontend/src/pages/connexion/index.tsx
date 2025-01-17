@@ -7,7 +7,7 @@ export default function Connexion() {
   return (
     <>
 
-      <Seo title="connexion" description="description..." />
+      <Seo title="Devs-studios" description="Page de connexion..." />
 
       <Layout sessionStatus={GUEST}>
       <LoginContainer /> 

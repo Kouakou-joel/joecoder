@@ -8,12 +8,10 @@ import { OnboardingFooter } from "../../footer/onboarding-footer";
 import { Logo } from "@/ul/disign-system/logo/logo";
 import { firestoreUpdateDocument } from "@/api/firestore";
 import { toast } from "react-toastify";
-import { useRouter } from "next/router"; // Importer useRouter pour la redirection
 export const FinalStep = ({ isLastStep }: BaseComponentProps) => {
     const { authUser } = useAuth();
     const { value: isLoading, toggle } = useToggle();
-    const router = useRouter(); // Initialiser le hook de redirection
-
+   
  // Ajout des dépendances dans useEffect
 
     const handleCloseOnboarding = async () => {
@@ -21,19 +19,19 @@ export const FinalStep = ({ isLastStep }: BaseComponentProps) => {
         const data = {
             onboardingIsCompleted: true,
         };
+        // Mettre à jour le champ onboardingIsCompleted dans la base de données Firestore
         try {
             const { error } = await firestoreUpdateDocument("users", authUser.uid, data);
             if (error) {
                 toast.error(error.message);
             }
             toast.success("Onboarding complété avec succès");
-            // Rediriger l'utilisateur vers son profil
-            router.push(`/profile/${authUser.uid}`);
         } catch (error: any) {
             toast.error(error.message || "Une erreur inconnue est survenue");
         } finally {
             toggle();
         }
+        
     };
 
     return (
@@ -71,7 +69,7 @@ export const FinalStep = ({ isLastStep }: BaseComponentProps) => {
                 </div>
             </div>
             <OnboardingFooter
-                next={handleCloseOnboarding}
+                 next={handleCloseOnboarding}
                 isLastStep={isLastStep()}
                 isLoading={isLoading}
             />

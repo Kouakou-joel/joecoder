@@ -52,7 +52,7 @@ export const Texteara = ({
                 {...(register &&
                 register(id, {
                     required: {
-                        value: true,
+                        value: false,
                         message: errorrMsg,
                     }
                 })
