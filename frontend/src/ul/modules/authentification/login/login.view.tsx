@@ -17,7 +17,7 @@ export const LoginView = ({ form }: Props) => {
                     <Image
                         fill
                         src="/assets/images/image-mdp.jpeg"
-                        alt="login"
+                        alt="login page"
                         className="rounded object-cover"
                     />
                 </div>

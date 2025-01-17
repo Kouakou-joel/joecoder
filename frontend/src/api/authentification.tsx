@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
     createUserWithEmailAndPassword, signInWithEmailAndPassword,
     signOut, sendPasswordResetEmail,
@@ -5,7 +6,6 @@ import {
 } from "firebase/auth";
 import { FirebaseError } from "firebase/app";
 import { auth } from "@/config/firebase-config";
-
 
 export const firebaseCreateUser = async (email: string, password: string) => {
 
@@ -32,7 +32,6 @@ export const firebaseCreateUser = async (email: string, password: string) => {
     }
 };
 
-
 export const firebaseSignInUser = async (email: string, password: string) => {
 
     try {
@@ -58,7 +57,6 @@ export const firebaseSignInUser = async (email: string, password: string) => {
         };
     }
 };
-
 
 export const firebaseLogoutUser = async () => {
 
@@ -98,8 +96,6 @@ export const sendEmailVerificationProccedure = async () => {
                     code: firebaseError.code,
                     message: firebaseError.message,
                 },
-
-
             }
         }
     }
@@ -112,7 +108,6 @@ export const sendEmailVerificationProccedure = async () => {
         }
     }
 };
-
 
 export const sendEmailToResetPasswod = async (email: string) => {
 
@@ -131,11 +126,10 @@ export const sendEmailToResetPasswod = async (email: string) => {
                 message: firebaseError.message,
             },
 
-
         };
     }
 };
-/* eslint-disable @typescript-eslint/no-explicit-any */
+
 export const updateUserIdentificationData = async (uid: string, data: any) => {
     try {
         const response = await fetch("https://console.firebase.google.com/project/joecoder-29421/functions", {
@@ -148,7 +142,7 @@ export const updateUserIdentificationData = async (uid: string, data: any) => {
                 data: data,
             }),
         });
-
+        
         if (!response.ok) {
             const errorResponse = await response.json();
             const firebaseError = errorResponse as FirebaseError;
@@ -159,19 +153,9 @@ export const updateUserIdentificationData = async (uid: string, data: any) => {
                 },
             }
         }
-
         return { data: true };
     } catch (error) {
-        const firebaseError = error as FirebaseError;
-        return {
-            error: {
-
-                code: firebaseError.code,
-                message: firebaseError.message,
-            },
-
-
-        };
+        
 
     }
 };
