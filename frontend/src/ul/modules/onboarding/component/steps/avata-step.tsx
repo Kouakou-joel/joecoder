@@ -71,6 +71,7 @@ export const AvatarStep = ({
           const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
           setUploadProgress(progress);
             toast.success("Avatar téléchargé avec succès");
+            next();
         },
         (error) => {
           console.error("Erreur de téléchargement", error);

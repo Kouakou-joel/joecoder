@@ -22,7 +22,7 @@ export const UserAccountForm = ({ form }: props) => {
                     component="div"
                     className="text-gray-700"
                     >
-                        857
+                        0
                     </Typography>
                     <Typography
                     variant="caption4"
