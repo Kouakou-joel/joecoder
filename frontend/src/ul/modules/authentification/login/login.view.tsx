@@ -16,8 +16,8 @@ export const LoginView = ({ form }: Props) => {
                 <div className="relative w-full h-[531px]">
                     <Image
                         fill
-                        src="/assets/images/desktop-anime.jpg"
-                        alt="register"
+                        src="/assets/images/image-mdp.jpeg"
+                        alt="login"
                         className="rounded object-cover"
                     />
                 </div>
