@@ -154,7 +154,7 @@ export const updateUserIdentificationData = async (uid: string, data: any) => {
             }
         }
         return { data: true };
-    } catch (error) {
+    } catch{
         
     }
 };
