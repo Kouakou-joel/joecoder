@@ -3,7 +3,7 @@ import { Button } from "@/ul/disign-system/button/button";
 import { Input } from "@/ul/disign-system/forms/input";
 import { Texteara } from "@/ul/disign-system/forms/textaera";
 import { Typography } from "@/ul/disign-system/typography/typography";
-import { useEffect, useState } from "react";
+
 
 interface props {
     form: FormType;
@@ -11,7 +11,7 @@ interface props {
 
 export const UserAccountForm = ({ form }: props) => {
     const { register, errors, isLoading, onSubmit, handleSubmit } = form;
-    const [subscribersCount, setSubscribersCount] = useState<number>(0);
+    // const [subscribersCount, setSubscribersCount] = useState<number>(0);
 
     // useEffect(() => {
     //     const fetchSubscribersCount = async () => {
@@ -41,7 +41,8 @@ export const UserAccountForm = ({ form }: props) => {
                     component="div"
                     className="text-gray-700"
                     >
-                        {subscribersCount}
+                        0
+                        {/* {subscribersCount} */}
                     </Typography>
                     <Typography
                     variant="caption4"

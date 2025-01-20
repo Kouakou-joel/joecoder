@@ -18,7 +18,7 @@ interface props {
     action?: () => void,
     type? : "button" | "submit" | "reset" ;
     fullwidth?: boolean,
-    onClick?: () => void;
+   
 }
 
 export const Button = ({
@@ -35,7 +35,7 @@ export const Button = ({
     action = () => { },
     type = "button",
     fullwidth,
-    onClick,
+
 }: props) => {
     let variantStyles: string = "",
         sizeStyles: string = "",

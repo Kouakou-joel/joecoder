@@ -39,7 +39,7 @@ export const Navigation = () => {
                 {/* Menu pour écrans larges */}
                 <div className="sm:flex items-center gap-4 hidden">
                     <Typography variant="caption3" component="div" className="flex items-center gap-7" >
-                        <ActiveLink href="/projects"> Projects</ActiveLink>
+                        <ActiveLink href="/project"> Projets</ActiveLink>
                         <ActiveLink href="/formation"> Formation</ActiveLink>
                         <ActiveLink href="/contacts"> Contacts</ActiveLink>
                     </Typography>
