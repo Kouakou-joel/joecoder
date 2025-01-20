@@ -8,9 +8,9 @@ import { Logo } from "@/ul/disign-system/logo/logo"
 export const CoderJoeSlackViews = () => {
 
     return (
-        <Container className="flex justify-between py-4">
+        <Container className="flex justify-between max-sm:px-40 max-lg:px-44 max-xl:px-52 py-4 max-sm:w-max max-lg:w-max max-xl:w-max">
 
-            <div className="flex flex-col justify-center space-y-5 py-2 max-w-2xl">
+            <div className="flex flex-col max-sm:flex-1 justify-center space-y-5 py-2 max-w-2xl">
                 <div className="flex items-center gap-2">
                     <Logo size="very-small"
                     />
@@ -39,7 +39,7 @@ export const CoderJoeSlackViews = () => {
                     Rejoins le groupe d aide
                 </Button>
             </div>
-            <div className="relative w-[300px] h-300px]">
+            <div className="relative max-sm:justify-end w-[300px] h-300px]">
                 <Image fill
                     src="/assets/images/slack.avif"
                     alt="description slack"

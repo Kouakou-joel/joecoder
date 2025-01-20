@@ -3,13 +3,32 @@ import { Button } from "@/ul/disign-system/button/button";
 import { Input } from "@/ul/disign-system/forms/input";
 import { Texteara } from "@/ul/disign-system/forms/textaera";
 import { Typography } from "@/ul/disign-system/typography/typography";
-
+import { useEffect, useState } from "react";
 
 interface props {
     form: FormType;
 }
+
 export const UserAccountForm = ({ form }: props) => {
     const { register, errors, isLoading, onSubmit, handleSubmit } = form;
+    const [subscribersCount, setSubscribersCount] = useState<number>(0);
+
+    // useEffect(() => {
+    //     const fetchSubscribersCount = async () => {
+    //         try {
+    //             const response = await fetch("/#");
+    //             if (!response.ok) {
+    //                 throw new Error("Erreur lors de la récupération du nombre d'abonnés");
+    //             }
+    //             const data = await response.json();
+    //             setSubscribersCount(data.count);
+    //         } catch (error) {
+    //             console.error("Erreur:", error);
+    //         }
+    //     };
+
+    //     fetchSubscribersCount();
+    // }, []);
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
@@ -22,7 +41,7 @@ export const UserAccountForm = ({ form }: props) => {
                     component="div"
                     className="text-gray-700"
                     >
-                        0
+                        {subscribersCount}
                     </Typography>
                     <Typography
                     variant="caption4"

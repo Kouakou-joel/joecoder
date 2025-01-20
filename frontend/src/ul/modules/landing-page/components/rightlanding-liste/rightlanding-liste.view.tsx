@@ -6,9 +6,9 @@ import { RiArrowRightLine, RiCheckboxCircleLine } from "react-icons/ri"
 
 export const RightLandingListeView = () => {
     return (
-        <Container className="space-y-10 py-24">
-            <div className="flex justify-center gap-24">
-                <div className="relative mt-10 w-[520px] h-[350px]"
+        <Container className="space-y-20 py-24 max-sm:w-max max-lg:w-max max-xl:w-max">
+            <div className="flex justify-center gap-24 max-sm:gap-24 max-md:gap-28 max-lg:gap-28 max-xl:gap-28 max-sm:px-20 max-md:px-28 max-lg:px-28 max-xl:px-56">
+                <div className="relative my-3 w-[520px] h-[350px]"
                 >
                     <Image
                         fill src="/assets/images/cake.svg"
@@ -34,7 +34,7 @@ export const RightLandingListeView = () => {
                 </div>
             </div>
             <div className="flex flex-row-reverse justify-center gap-24">
-                <div className="relative mt-10 w-[520px] h-[350px]"
+                <div className="relative mt-3 w-[520px] h-[350px]"
                 >
                     <Image
                         fill src="/assets/images/top.svg"

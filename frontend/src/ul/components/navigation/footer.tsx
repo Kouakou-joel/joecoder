@@ -4,7 +4,7 @@ import Image from "next/image";
 import { footerLinks } from "./app-links";
 import { v4 as uuidv4 } from "uuid";
 import { ActiveLink } from "./active-link";
-import { FooterLinks,  } from "@/types/app-links";
+import { FooterLinks, } from "@/types/app-links";
 import { LinkTypes } from "@/lib/link-types";
 import { ReseauSocialButton } from "./reseau-social-button";
 
@@ -13,14 +13,14 @@ const Footer = () => {
     const currentYear = new Date().getFullYear();
 
     const footerNavigationList = footerLinks.map((columnLinks) => (
-        <FooterLink key={uuidv4()} data={{ 
+        <FooterLink key={uuidv4()} data={{
             label: columnLinks.label,
-            links: columnLinks.data 
+            links: columnLinks.data
         }} />
     ));
     return (
-        <div className="bg-gray-700 py-18">
-            <Container className="flex justify-between py-16">
+        <div className="max-sm:justify-center bg-gray-700 max-sm:px-36 py-18 max-md:w-max max-lg:w-max max-xl:w-max">
+            <Container className="flex justify-between max-sm:px-18 max-lg:px-40 max-xl:px-36 py-16">
                 <div className="flex flex-col items-center gap-1">
                     <Typography
                         variant="caption1"
@@ -58,7 +58,7 @@ const Footer = () => {
                             target="_blank" className="underline">jojomignon5612@gmail.com</a>
                         {` Tous droits réservés.`}
                     </Typography>
-        <ReseauSocialButton theme="gray" />
+                    <ReseauSocialButton theme="gray" />
                 </div>
             </Container>
         </div>

@@ -5,44 +5,44 @@ export const footerApplicatoLinks: AppLinks[] = [
     {
         label: 'Accueil',
         baseUrl: '/#',
-        type: 'external',
+        type: 'internal',
     },
     {
         label: 'Projet',
         baseUrl: '/#',
-        type: 'external',
+        type: 'internal',
     },
     {
         label: 'Jeo coder',
-        baseUrl: '/#',
+        baseUrl: 'https://www.linkedin.com/feed/?trk=404_page',
         type: 'external',
     },
     {
         label: 'Formation',
         baseUrl: 'https://youtube.com/@JojoMignon-d5n',
-        type: 'internal',
+        type: 'external',
     }
 ];
 export const footerFormationLinks: AppLinks[] = [
     {
         label: 'CUG',
         baseUrl: '/#',
-        type: 'external',
+        type: 'internal',
     },
     {
         label: 'Confidencialite',
         baseUrl: '/#',
-        type: 'external',
+        type: 'internal',
     },
     {
         label: 'A propos',
         baseUrl: '/#',
-        type: 'external',
+        type: 'internal',
     },
     {
         label: 'Contact',
         baseUrl: 'https://www.facebook.com/profile.php?id=100076540940260',
-        type: 'external',
+        type: 'internal',
     }
 ];
 export const footerUserLinks: AppLinks[] = [
@@ -54,7 +54,7 @@ export const footerUserLinks: AppLinks[] = [
     {
         label: 'Connexion',
         baseUrl: '/connexion',
-        type: 'external',
+        type: 'internal',
     },
     {
         label: 'Inscription',

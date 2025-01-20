@@ -23,7 +23,7 @@ export const UseAccountNavigation = () => {
                     <ActiveLink href="/mon-compte">Mon compte</ActiveLink>
                 </Typography>
                 <Typography variant="caption2" weight="medium">
-                    <ActiveLink href="/mon-compte/mes-projets">Mes projets</ActiveLink>
+                    <ActiveLink href="/projects">Mes projets</ActiveLink>
                 </Typography>
 
 

@@ -8,7 +8,6 @@ export default function Connexion() {
     <>
 
       <Seo title="Devs-studios" description="Page de connexion..." />
-
       <Layout sessionStatus={GUEST}>
       <LoginContainer /> 
       </Layout>

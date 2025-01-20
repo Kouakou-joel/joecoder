@@ -4,8 +4,8 @@ import Image from "next/image"
 import { RiPlayCircleLine } from "react-icons/ri"
 export const CurrentCoursesView = () => {
     return (
-        <div className="bg-gray-200">
-            <Container className="py-24 text-center">
+        <div className="bg-gray-200 max-sm:px-80 max-sm:w-max max-lg:w-max max-xl:w-max">
+            <Container className="max-lg:px-72 max-xl:px-80 py-24 text-center">
                 <Typography variant="h2" component="h2" className="mb-2.5">
                     Formation react.js gratuite
                 </Typography>

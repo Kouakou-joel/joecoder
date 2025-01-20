@@ -39,7 +39,7 @@ export const Input =({
      <div className="flex items-center">
      {type === "url" &&(
             <div className="border-gray-400 border-y bg-gray-500/40 p-2 border-l rounded-l text-gray-500">
-                httttp://
+                http://
             </div>
         )}
 
@@ -56,7 +56,6 @@ export const Input =({
         )}
         placeholder={placeholder}
         disabled={isLoading}
-        zz
         {...(register &&
         register(id, {
             required: {

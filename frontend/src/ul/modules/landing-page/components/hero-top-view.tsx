@@ -4,8 +4,8 @@ import { Typography } from "@/ul/disign-system/typography/typography"
 import Image from "next/image"
 export const HeroTopView = () => {
     return (
-        <Container className="relative pt-40 pb-52 overflow-hidden">
-            <div className="space-x-5 space-y-3 w-full max-w-2xl">
+        <Container className="relative mt-4 max-sm:px-36 max-lg:px-36 max-xl:px-32 py-4 pt-40 max-sm:pt-14 pb-52 max-sm:pb-10 max-sm:w-max max-lg:w-max overflow-hidden">
+            <div className="max-lg:flex max-sm:flex-col max-lg:flex-col space-x-5 space-y-3 max-sm:pr-96 max-lg:pr-96 max-xl:pr-80 w-full max-w-7xl">
                 <Typography
                     variant="h1"
                   component="h1"
@@ -20,7 +20,7 @@ export const HeroTopView = () => {
                     theme="gray"
                     component="p"
               
-                    className="mx-w-xl"
+                    className="max-w-xl"
 
                 >
                    Ici on se prend pas la tete , on code comme des bete |
@@ -29,7 +29,7 @@ export const HeroTopView = () => {
 
                 </Typography>
 
-                <div className="space-x-5 p-2.5">
+                <div className="max-sm:flex space-x-5 max-sm:space-x-4 p-2.5 max-sm:p-1">
                     <Button baseUrl="">
                       Commencer  
                     </Button>
@@ -38,7 +38,7 @@ export const HeroTopView = () => {
                     </Button>
                 </div>
             </div>
-            <div>
+            <div className="">
                 <Image
                     src="/assets/images/anime hero.jpg"
                     alt="anime inspiration"

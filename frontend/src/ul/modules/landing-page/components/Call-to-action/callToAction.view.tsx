@@ -5,8 +5,8 @@ import { Typography } from "@/ul/disign-system/typography/typography"
 import Image from "next/image"
 export const CallToActionView = () => {
     return (
-        <div className="relative bg-primary overflow-hidden">
-            <Container className="py-20">
+        <div className="relative bg-primary max-sm:px-60 max-lg:px-32 max-xl:px-60 max-sm:w-max max-lg:w-max max-xl:w-max overflow-hidden">
+            <Container className="max-xl:gap-40 max-lg:px-32 py-20">
 
                 <div className="relative z-10 space-y-5 max-w-3xl">
 
@@ -23,7 +23,7 @@ export const CallToActionView = () => {
                         </Button>
                     </div>
                 </div>
-                <div className="relative z-10">
+                <div className="relative z-10 max-xl:hidden">
                     <Image 
                 
                     src="/assets/images/rocket.jpg"

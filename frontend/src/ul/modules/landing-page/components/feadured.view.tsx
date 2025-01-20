@@ -74,7 +74,7 @@ export const FeaturedView = () => {
     })
     return (
 
-        <div className="bg-gray-200">
+        <div className="bg-gray-20 max-sm:w-max">
             <Container className="gap-24 grid grid-cols-12 py-24">
                 <div className="gap-7 grid grid-cols-2 col-span-7">
                     {featuredList}
