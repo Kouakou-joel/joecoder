@@ -14,7 +14,7 @@ export const RegisterForm = ({ form }: Props) => {
         handleSubmit
      } = form;
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 pt-8 pb-5">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 max-sm:space-y-8 max-lg:space-y-8 max-xl:space-y-10 pt-8 pb-5">
             <Input
                 type="email"
                 placeholder="joecoder@gmail.com"

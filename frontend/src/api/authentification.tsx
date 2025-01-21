@@ -142,7 +142,7 @@ export const updateUserIdentificationData = async (uid: string, data: any) => {
                 data: data,
             }),
         });
-        
+
         if (!response.ok) {
             const errorResponse = await response.json();
             const firebaseError = errorResponse as FirebaseError;
@@ -154,7 +154,7 @@ export const updateUserIdentificationData = async (uid: string, data: any) => {
             }
         }
         return { data: true };
-    } catch{
-        
+    } catch {
+
     }
 };

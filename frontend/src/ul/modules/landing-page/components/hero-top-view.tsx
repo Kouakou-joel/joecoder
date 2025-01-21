@@ -4,8 +4,8 @@ import { Typography } from "@/ul/disign-system/typography/typography"
 import Image from "next/image"
 export const HeroTopView = () => {
     return (
-        <Container className="relative mt-4 max-sm:px-36 max-lg:px-36 max-xl:px-32 py-4 pt-40 max-sm:pt-14 pb-52 max-sm:pb-10 max-sm:w-max max-lg:w-max overflow-hidden">
-            <div className="max-lg:flex max-sm:flex-col max-lg:flex-col space-x-5 space-y-3 max-sm:pr-96 max-lg:pr-96 max-xl:pr-80 w-full max-w-7xl">
+        <Container className="relative max-sm:mx-36 max-lg:mx-36 max-xl:mx-32 mt-4 py-4 pt-40 max-sm:pt-14 pb-52 max-sm:pb-10 max-sm:w-max max-lg:w-max overflow-hidden">
+            <div className="max-lg:flex max-sm:flex-col max-lg:flex-col space-x-5 space-y-3 max-sm:pr-96 max-lg:pr-96 max-xl:pr-96 w-full max-w-7xl">
                 <Typography
                     variant="h1"
                   component="h1"

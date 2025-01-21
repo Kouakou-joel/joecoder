@@ -21,7 +21,7 @@ export const Navigation = () => {
     )
 
     return (
-        <div className="border-gray-400 shadow-md border-b-2 max-sm:w-max max-lg:w-max max-xl:w-max">
+        <div className="border-gray-400 shadow-md max-sm:mx-44 border-b-2 max-sm:w-max max-lg:w-max max-xl:w-max">
             <Container className="flex justify-between items-center gap-7 max-sm:px-32 max-xl:px-10 py-3">
                 <Link href="/" className="max-sm:pr-96 max-xl:pr-72">
                     <div className="flex items-center gap-2.5">
