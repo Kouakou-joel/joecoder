@@ -17,13 +17,13 @@ export const UseAccountNavigation = () => {
         }
     }
     return (
-        <Box className="flex flex-col gap-7">
-            <div className="flex flex-col gap-3">
+        <Box className="flex flex-col gap-7 max-sm:mx-24 max-lg:mx-24 max-xl:mx-40 max-sm:w-max max-lg:w-max max-xl:w-max">
+            <div className="flex flex-col gap-3 max-sm:px-32 max-lg:px-28">
                 <Typography variant="caption2" weight="medium">
-                    <ActiveLink href="/mon-compte">Mon compte</ActiveLink>
+                    <ActiveLink href="/mon-espace">Mon compte</ActiveLink>
                 </Typography>
                 <Typography variant="caption2" weight="medium">
-                    <ActiveLink href="/projects">Mes projets</ActiveLink>
+                    <ActiveLink href="/project">Mes projets</ActiveLink>
                 </Typography>
 
 

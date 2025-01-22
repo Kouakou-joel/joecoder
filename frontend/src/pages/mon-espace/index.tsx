@@ -14,7 +14,7 @@ export default function MonCompte() {
 
       <Layout WithSidebar sessionStatus={REGISTERED}>
     
-        <UserAccountContainer />
+        <UserAccountContainer  />
       </Layout>
 
     </>

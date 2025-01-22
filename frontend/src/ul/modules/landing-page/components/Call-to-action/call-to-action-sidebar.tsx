@@ -4,11 +4,10 @@ import Image from "next/image"
 
 export const CallToActionSidebarComponent = ()=>{
     return(
-        <div className="relative flex flex-col justify-center items-center gap-8 bg-primary px-8 py-12 pb-44 rounded h-80 overflow-hidden">
+        <div className="relative flex flex-col justify-center items-center gap-8 bg-primary max-sm:mx-24 max-lg:mx-24 max-xl:mx-16 px-8 py-12 pb-44 rounded max-sm:w-max max-lg:w-max max-xl:w-max h-80 overflow-hidden">
             <Typography
             variant="lead"
             weight="medium"
-   
             theme="white"
             className="text-center"
             >
@@ -19,7 +18,6 @@ export const CallToActionSidebarComponent = ()=>{
                 baseUrl="http://google.com"
                 variant="secondary"
                 linkType="external"
-
                  >
                     Découvrir
                 </Button>
@@ -28,7 +26,7 @@ export const CallToActionSidebarComponent = ()=>{
                  alt="illustration" 
                  width={200}
                  height={200} 
-                 className="-bottom-2 left-1/2 absolute transform -translate-x-1/2"
+                 className="-bottom-2 left-1/2 absolute transform -translate-x-1/2" 
                 />
             </div>
         </div>

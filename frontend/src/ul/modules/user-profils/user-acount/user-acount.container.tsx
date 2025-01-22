@@ -90,7 +90,7 @@ export const UserAccountContainer = () => {
     }
 
     return (
-        <div className="flex justify-center py-20">
+        <div className="flex justify-center ml-10 max-sm:ml-96 max-lg:ml-72 py-14 max-xl:pl-60 max-sm:w-max max-lg:w-max max-xl:w-max max-w-7xl">
             <UserAccountView
                 form={{
                     errors,

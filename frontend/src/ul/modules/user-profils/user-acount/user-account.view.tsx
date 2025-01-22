@@ -9,7 +9,7 @@ export const UserAccountView= ({form}: props) => {
     
    
     return (
-        <div className="space-y-5">
+        <div className="space-y-6">
             <Typography 
             variant="h1"
             component="h1"
